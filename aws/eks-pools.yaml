@@ -1,0 +1,59 @@
+---
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: scylla-demo7
+  region: eu-central-1
+
+nodeGroups:
+  - name: scylla-pool
+    instanceType: i3.2xlarge
+    desiredCapacity: 3
+    tags:
+      keep: "48"
+    labels:
+      pool: "scylla-pool"
+    taints:
+      role: "scylla-clusters:NoSchedule"
+    ssh:
+      allow: true
+    preBootstrapCommands:
+      - blkdiscard /dev/nvme0n1
+      - mkfs.xfs -f /dev/nvme0n1
+      - mkdir -p /mnt/raid-disks/disk0
+      - mount -t xfs -o noatime /dev/nvme0n1 /mnt/raid-disks/disk0
+      - echo "/dev/nvme0n1 /mnt/raid-disks/disk0 xfs noatime,nofail 0 0\n" >> /etc/fstab
+    kubeletExtraConfig:
+      cpuManagerPolicy: static
+
+  - name: monitoring-pool
+    instanceType: i3.large
+    desiredCapacity: 1
+    tags:
+      keep: "48"
+    labels:
+      pool: "monitoring-pool"
+    ssh:
+      allow: true
+    preBootstrapCommands:
+      - blkdiscard /dev/nvme0n1
+      - mkfs.xfs -f /dev/nvme0n1
+      - mkdir -p /mnt/raid-disks/disk0
+      - mount -t xfs -o noatime /dev/nvme0n1 /mnt/raid-disks/disk0
+      - echo "/dev/nvme0n1 /mnt/raid-disks/disk0 xfs noatime,nofail 0 0\n" >> /etc/fstab
+
+  - name: cassandra-stress-pool
+    instanceType: c4.2xlarge
+    desiredCapacity: 4
+    tags:
+      keep: "48"
+    labels:
+      pool: "cassandra-stress-pool"
+    taints:
+      role: "cassandra-stress:NoSchedule"
+    ssh:
+      allow: true
+    preBootstrapCommands:
+      - curl -o /etc/yum.repos.d/scylla.repo -L http://repositories.scylladb.com/scylla/repo/e6090d0f-1820-4ff7-b354-32d71e30f761/centos/scylladb-4.0.repo
+      - yum install -y scylla-tools

@@ -21,12 +21,16 @@ nodeGroups:
     preBootstrapCommands:
       - curl -o /etc/yum.repos.d/scylla.repo -L http://repositories.scylladb.com/scylla/repo/e6090d0f-1820-4ff7-b354-32d71e30f761/centos/scylladb-4.0.repo
       - yum install -y scylla-server
-      - yum install -y hwloc ethtool psmisc syssta
-      - scylla_raid_setup --disks /dev/nvme0n1 --update-fstab
-      - scylla_io_setup --ami
-      - /opt/scylladb/scripts/perftune.py --nic eth0 --mode sq_split --tune net
-      - scylla_cpuset_setup --cpuset 1-3,5-7
+      - yum install -y hwloc ethtool
+      - /opt/scylladb/scripts/scylla_setup --ntp-domain amazon --no-coredump-setup --no-sysconfig-setup --no-raid-setup --no-io-setup --no-bootparam-setup --no-ec2-check --no-cpuscaling-setup
+      - cpupower frequency-set -g performance
+      # dracut
+      - /opt/scylladb/scripts/scylla_raid_setup --disks /dev/nvme0n1 --update-fstab
+      - /opt/scylladb/scripts/scylla_io_setup --ami
+      - /opt/scylladb/scripts/perftune.py --nic eth0 --mode sq --tune net
+      - /opt/scylladb/scripts/scylla_cpuset_setup --cpuset 1-7
       - scylla_dev_mode_setup --developer-mode 0
+      - /opt/scylladb/scripts/scylla_prepare
       - echo "SCYLLA_DOCKER_ARGS=\"--listen-address $(hostname -i) --rpc-address $(hostname -i) --seed-provider-parameters seeds=$(hostname -i) --blocked-reactor-notify-ms 999999999\"" > /etc/scylla.d/docker.conf
     kubeletExtraConfig:
       cpuManagerPolicy: static

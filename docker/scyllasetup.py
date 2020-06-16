@@ -58,9 +58,7 @@ class ScyllaSetup:
         if not os.path.exists(data_dir):
             os.makedirs(data_dir)
 
-        self._run(['/opt/scylladb/scripts/scylla_io_setup'])
         os.makedirs('/var/lib/scylla/commitlog')
-        self._run(['/opt/scylladb/scripts/scylla_sysconfig_setup', '--nic', 'eth0', '--setup-nic', '--ami'])
 
     def cqlshrc(self):
         home = os.environ['HOME']

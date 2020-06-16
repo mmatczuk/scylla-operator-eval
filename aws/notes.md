@@ -190,3 +190,7 @@ kill -9 $(pidof kubelet)
 https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/
 
 https://github.com/pingcap/tidb-operator/blob/master/manifests/local-dind/local-volume-provisioner.yaml
+
+
+Local Volume Provisioner requires 'mount --bind' after a mount is successfully mounted from inside pod
+https://github.com/kubernetes-incubator/external-storage/issues/867

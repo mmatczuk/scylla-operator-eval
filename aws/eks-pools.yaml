@@ -19,11 +19,18 @@ nodeGroups:
     ssh:
       allow: true
     preBootstrapCommands:
-      - blkdiscard /dev/nvme0n1
-      - mkfs.xfs -f /dev/nvme0n1
-      - mkdir -p /mnt/raid-disks/disk0
-      - mount -t xfs -o noatime /dev/nvme0n1 /mnt/raid-disks/disk0
-      - echo "/dev/nvme0n1 /mnt/raid-disks/disk0 xfs noatime,nofail 0 0\n" >> /etc/fstab
+      - curl -o /etc/yum.repos.d/scylla.repo -L http://repositories.scylladb.com/scylla/repo/e6090d0f-1820-4ff7-b354-32d71e30f761/centos/scylladb-4.0.repo
+      - yum install -y scylla-server
+      - yum install -y hwloc ethtool
+      - /opt/scylladb/scripts/scylla_setup --ntp-domain amazon --no-coredump-setup --no-sysconfig-setup --no-raid-setup --no-io-setup --no-bootparam-setup --no-ec2-check --no-cpuscaling-setup
+      - cpupower frequency-set -g performance
+      # dracut
+      - /opt/scylladb/scripts/scylla_raid_setup --disks /dev/nvme0n1 --update-fstab
+      - /opt/scylladb/scripts/scylla_io_setup --ami
+      - /opt/scylladb/scripts/perftune.py --nic eth0 --mode sq --tune net
+      - /opt/scylladb/scripts/scylla_cpuset_setup --cpuset 1-7
+      - scylla_dev_mode_setup --developer-mode 0
+      - /opt/scylladb/scripts/scylla_prepare
     kubeletExtraConfig:
       cpuManagerPolicy: static
 

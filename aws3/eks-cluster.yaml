@@ -1,0 +1,14 @@
+---
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: scylla-demo10
+  region: eu-central-1
+
+nodeGroups:
+  - name: operator-pool
+    instanceType: t3.small
+    desiredCapacity: 1
+    tags:
+      keep: "48"

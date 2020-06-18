@@ -327,7 +327,7 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: metadata.namespace
-        image: mmatczuk/scylla-operator:10
+        image: mmatczuk/scylla-operator:11
         imagePullPolicy: IfNotPresent
         name: manager
         resources:

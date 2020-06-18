@@ -92,7 +92,7 @@ spec:
       - name: eu-central-1a
         scyllaConfig: "scylla-config"
         scyllaAgentConfig: "scylla-agent-config"
-        members: 1
+        members: 3
         storage:
           storageClassName: local-raid-disks
           capacity: 1800G

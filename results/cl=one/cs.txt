@@ -1,0 +1,160 @@
+Results:
+Op rate                   :   16,509 op/s  [WRITE: 16,509 op/s]
+Partition rate            :   16,509 pk/s  [WRITE: 16,509 pk/s]
+Row rate                  :   16,509 row/s [WRITE: 16,509 row/s]
+Latency mean              :    6.0 ms [WRITE: 6.0 ms]
+Latency median            :    2.2 ms [WRITE: 2.2 ms]
+Latency 95th percentile   :   11.5 ms [WRITE: 11.5 ms]
+Latency 99th percentile   :  115.7 ms [WRITE: 115.7 ms]
+Latency 99.9th percentile :  183.5 ms [WRITE: 183.5 ms]
+Latency max               :  278.4 ms [WRITE: 278.4 ms]
+Total partitions          : 19,820,962 [WRITE: 19,820,962]
+Total errors              :          0 [WRITE: 0]
+Total GC count            : 0
+Total GC memory           : 0.000 KiB
+Total GC time             :    0.0 seconds
+Avg GC time               :    NaN ms
+StdDev GC time            :    0.0 ms
+Total operation time      : 00:20:00
+
+END
+Results:
+Op rate                   :   16,508 op/s  [WRITE: 16,508 op/s]
+Partition rate            :   16,508 pk/s  [WRITE: 16,508 pk/s]
+Row rate                  :   16,508 row/s [WRITE: 16,508 row/s]
+Latency mean              :    6.0 ms [WRITE: 6.0 ms]
+Latency median            :    2.2 ms [WRITE: 2.2 ms]
+Latency 95th percentile   :   11.5 ms [WRITE: 11.5 ms]
+Latency 99th percentile   :  115.6 ms [WRITE: 115.6 ms]
+Latency 99.9th percentile :  183.4 ms [WRITE: 183.4 ms]
+Latency max               :  286.0 ms [WRITE: 286.0 ms]
+Total partitions          : 19,818,422 [WRITE: 19,818,422]
+Total errors              :          0 [WRITE: 0]
+Total GC count            : 0
+Total GC memory           : 0.000 KiB
+Total GC time             :    0.0 seconds
+Avg GC time               :    NaN ms
+StdDev GC time            :    0.0 ms
+Total operation time      : 00:20:00
+
+END
+Results:
+Op rate                   :   16,425 op/s  [WRITE: 16,425 op/s]
+Partition rate            :   16,425 pk/s  [WRITE: 16,425 pk/s]
+Row rate                  :   16,425 row/s [WRITE: 16,425 row/s]
+Latency mean              :    6.1 ms [WRITE: 6.1 ms]
+Latency median            :    2.2 ms [WRITE: 2.2 ms]
+Latency 95th percentile   :   11.6 ms [WRITE: 11.6 ms]
+Latency 99th percentile   :  115.9 ms [WRITE: 115.9 ms]
+Latency 99.9th percentile :  183.8 ms [WRITE: 183.8 ms]
+Latency max               :  281.0 ms [WRITE: 281.0 ms]
+Total partitions          : 19,719,767 [WRITE: 19,719,767]
+Total errors              :          0 [WRITE: 0]
+Total GC count            : 0
+Total GC memory           : 0.000 KiB
+Total GC time             :    0.0 seconds
+Avg GC time               :    NaN ms
+StdDev GC time            :    0.0 ms
+Total operation time      : 00:20:00
+
+END
+Results:
+Op rate                   :   16,496 op/s  [WRITE: 16,496 op/s]
+Partition rate            :   16,496 pk/s  [WRITE: 16,496 pk/s]
+Row rate                  :   16,496 row/s [WRITE: 16,496 row/s]
+Latency mean              :    6.0 ms [WRITE: 6.0 ms]
+Latency median            :    2.2 ms [WRITE: 2.2 ms]
+Latency 95th percentile   :   11.3 ms [WRITE: 11.3 ms]
+Latency 99th percentile   :  115.9 ms [WRITE: 115.9 ms]
+Latency 99.9th percentile :  183.6 ms [WRITE: 183.6 ms]
+Latency max               :  280.8 ms [WRITE: 280.8 ms]
+Total partitions          : 19,807,918 [WRITE: 19,807,918]
+Total errors              :          0 [WRITE: 0]
+Total GC count            : 0
+Total GC memory           : 0.000 KiB
+Total GC time             :    0.0 seconds
+Avg GC time               :    NaN ms
+StdDev GC time            :    0.0 ms
+Total operation time      : 00:20:00
+
+END
+Results:
+Op rate                   :   16,591 op/s  [WRITE: 16,591 op/s]
+Partition rate            :   16,591 pk/s  [WRITE: 16,591 pk/s]
+Row rate                  :   16,591 row/s [WRITE: 16,591 row/s]
+Latency mean              :    6.0 ms [WRITE: 6.0 ms]
+Latency median            :    2.2 ms [WRITE: 2.2 ms]
+Latency 95th percentile   :   11.4 ms [WRITE: 11.4 ms]
+Latency 99th percentile   :  115.6 ms [WRITE: 115.6 ms]
+Latency 99.9th percentile :  183.1 ms [WRITE: 183.1 ms]
+Latency max               :  279.7 ms [WRITE: 279.7 ms]
+Total partitions          : 19,919,443 [WRITE: 19,919,443]
+Total errors              :          0 [WRITE: 0]
+Total GC count            : 0
+Total GC memory           : 0.000 KiB
+Total GC time             :    0.0 seconds
+Avg GC time               :    NaN ms
+StdDev GC time            :    0.0 ms
+Total operation time      : 00:20:00
+
+END
+Results:
+Op rate                   :   16,716 op/s  [WRITE: 16,716 op/s]
+Partition rate            :   16,716 pk/s  [WRITE: 16,716 pk/s]
+Row rate                  :   16,716 row/s [WRITE: 16,716 row/s]
+Latency mean              :    6.0 ms [WRITE: 6.0 ms]
+Latency median            :    2.2 ms [WRITE: 2.2 ms]
+Latency 95th percentile   :   11.2 ms [WRITE: 11.2 ms]
+Latency 99th percentile   :  115.3 ms [WRITE: 115.3 ms]
+Latency 99.9th percentile :  182.8 ms [WRITE: 182.8 ms]
+Latency max               :  278.7 ms [WRITE: 278.7 ms]
+Total partitions          : 20,069,051 [WRITE: 20,069,051]
+Total errors              :          0 [WRITE: 0]
+Total GC count            : 0
+Total GC memory           : 0.000 KiB
+Total GC time             :    0.0 seconds
+Avg GC time               :    NaN ms
+StdDev GC time            :    0.0 ms
+Total operation time      : 00:20:00
+
+END
+Results:
+Op rate                   :   16,543 op/s  [WRITE: 16,543 op/s]
+Partition rate            :   16,543 pk/s  [WRITE: 16,543 pk/s]
+Row rate                  :   16,543 row/s [WRITE: 16,543 row/s]
+Latency mean              :    6.0 ms [WRITE: 6.0 ms]
+Latency median            :    2.2 ms [WRITE: 2.2 ms]
+Latency 95th percentile   :   11.2 ms [WRITE: 11.2 ms]
+Latency 99th percentile   :  115.8 ms [WRITE: 115.8 ms]
+Latency 99.9th percentile :  183.6 ms [WRITE: 183.6 ms]
+Latency max               :  278.4 ms [WRITE: 278.4 ms]
+Total partitions          : 19,864,699 [WRITE: 19,864,699]
+Total errors              :          0 [WRITE: 0]
+Total GC count            : 0
+Total GC memory           : 0.000 KiB
+Total GC time             :    0.0 seconds
+Avg GC time               :    NaN ms
+StdDev GC time            :    0.0 ms
+Total operation time      : 00:20:00
+
+END
+Results:
+Op rate                   :   16,600 op/s  [WRITE: 16,600 op/s]
+Partition rate            :   16,600 pk/s  [WRITE: 16,600 pk/s]
+Row rate                  :   16,600 row/s [WRITE: 16,600 row/s]
+Latency mean              :    6.0 ms [WRITE: 6.0 ms]
+Latency median            :    2.2 ms [WRITE: 2.2 ms]
+Latency 95th percentile   :   11.4 ms [WRITE: 11.4 ms]
+Latency 99th percentile   :  115.3 ms [WRITE: 115.3 ms]
+Latency 99.9th percentile :  183.2 ms [WRITE: 183.2 ms]
+Latency max               :  283.4 ms [WRITE: 283.4 ms]
+Total partitions          : 19,929,961 [WRITE: 19,929,961]
+Total errors              :          0 [WRITE: 0]
+Total GC count            : 0
+Total GC memory           : 0.000 KiB
+Total GC time             :    0.0 seconds
+Avg GC time               :    NaN ms
+StdDev GC time            :    0.0 ms
+Total operation time      : 00:20:00
+
+END

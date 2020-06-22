@@ -3,11 +3,11 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: scylla-demo10
+  name: scylla-demo
   region: eu-central-1
 
 nodeGroups:
-  - name: scylla-pool-1
+  - name: scylla-pool
     instanceType: i3.2xlarge
     desiredCapacity: 3
     tags:
